@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>electiondetailHomepage</title>
+        <link rel="stylesheet" href="/static/css/createElection.css"/>
+        <link rel="stylesheet" href="/static/css/electiondetailHomePage.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="colorlib.com">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<section style="background-color: lightseagreen;">
+    <nav>
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/electionDetail">BACK</a> </li>
+                <li><a href="/aboutUs">ABOUT US</a> </li>
+                <li><a href="/help">HELP</a> </li>
+                <li><a href="/profile">PROFILE</a> </li>
+                <li><a href="/setting">SETTING</a> </li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+   </section>
+    <div class="s130">
+      <form action="/voterDisplay" method='post'>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+                      <span class="info">detail information of voters</span>
+          </div>
+          <div class="input-field second-wrap btn-search"  >
+              <p style="text-align: center;">
+                  <a href="/voterDisplay" value="VIEW"  style="color: white;">VIEW</a>
+              </p>
+
+          </div>
+        </div>
+      </form>
+        <form action="/candidateDisplay" method='post'>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+                      <span class="info">detail information of candidates</span>
+          </div>
+          <div class="input-field second-wrap btn-search"  >
+              <p style="text-align: center;">
+                  <a href="/candidateDisplay" value="VIEW"  style="color: white;">VIEW</a>
+              </p>
+
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/extention/choices.js"></script>
+
+<script>
+     var navlinks=document.getElementById("navlinks");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+     function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>

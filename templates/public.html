@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <link rel="stylesheet" href="/static/css/public.css"/>
+
+    <!-- Title Page-->
+    <title>PublicDetails</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Main CSS-->
+    <link href="/static/css/public.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+<section style="background-color: lightseagreen;">
+    <nav>
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/dashboard">DASHBOARD</a> </li>
+                <li><a href="/aboutUs">ABOUT US</a> </li>
+                <li><a href="/help">HELP</a> </li>
+                <li><a href="/profile">PROFILE</a> </li>
+                <li><a href="/setting">SETTING</a> </li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+   </section>
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h3 class="title">Upload Public(voters & candidates name and email) data file</h3><br>
+                        <div style="text-align: center;">
+
+                    <form  action="/api/FileUpload" method='post' enctype="multipart/form-data"><br>
+                    <input type="file" name="file">
+                    <br>
+                        <div class="p-t-20">
+                            <input class="btn btn--radius btn--green" type="submit" value="UPLOAD"></input>
+                        </div>
+                    </form>
+                                                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{msg}}
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="/static/js/public.js"></script>
+<script>
+     var navlinks=document.getElementById("navlinks");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+     function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>createElection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/css/nunito-font.css">
+    <link rel="stylesheet" href="/static/css/createElection.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+ <section style="background-color: lightseagreen;">
+    <nav>
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/dashboard">DASHBOARD</a> </li>
+                <li><a href="/aboutUs">ABOUT US</a> </li>
+                <li><a href="/help">HELP</a> </li>
+                <li><a href="/profile">PROFILE</a> </li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+   </section>
+ <br><p style="text-align=center;">{{msg}}</p>
+<div class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" >
+			<form class="form-detail" action="api/createElection" method="post">
+				<h2>Enter Election details</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+                        <label>Enter election id</label>
+						<input type="text" name="electionId"  class="input-text" >
+					</div>
+					<div class="form-row">
+                        <label>Enter position</label>
+						<input type="text" name="postion"  class="input-text"  >
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+                                <label>Enter start date</label>
+						<input type="text" name="startDate"  class="input-text" >
+					</div>
+					<div class="form-row">
+                                <label>Enter end date</label>
+						<input type="text" name="endDate"  class="input-text" >
+					</div>
+
+				</div>
+				<div class="form-row-last">
+					<input type="submit" name="submit" class="register" value="SUBMIT">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+     var navlinks=document.getElementById("navlinks");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+     function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>

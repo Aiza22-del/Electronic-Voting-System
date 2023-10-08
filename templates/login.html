@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Login</title>
+  <link rel="stylesheet" href="/static/css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<p style="text-align:center;">{{msg}}</p>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="box"></div>
+  <div class="container-forms">
+    <div class="container-info">
+      <div class="info-item">
+        <div class="table">
+          <div class="table-cell">
+            <p>
+              Login as Admin
+            </p>
+            <div class="btn">
+              Log in
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="table">
+          <div class="table-cell">
+            <p>
+              Login as voter/candidate
+            </p>
+            <div class="btn">
+              Login
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-form">
+      <div class="form-item log-in">
+          <h3 style="text-align: center;">Admin login</h3>
+        <div class="table">
+          <div class="table-cell">
+              <form action="/api/adminlogin" method='post'>
+            <input name="username" placeholder="Username" type="text" />
+              <input name="passwd" placeholder="Password" type="Password" />
+                <input type="submit" class="btn"  name="submit" value="LOGIN">
+
+                  <p style="color: lightseagreen; text-align: center;">Don't have admin account :
+                      <a href="/signupAdmin" style="text-align: center;">Signup </a>
+                  </p>
+
+                  </form>
+          </div>
+        </div>
+      </div>
+      <div class="form-item sign-up">
+          <h3 style="text-align: center;">Voter/Candidate login</h3>
+        <div class="table">
+          <div class="table-cell">
+              <form action="/api/VoterLogin" method='post'>
+              <input name="username" placeholder="Username" type="text" />
+              <input name="id" placeholder="UserId" type="text" />
+                <input class="btn" type="submit" name="submit" value="LOGIN" >
+
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="/static/js/login.js"></script>
+
+</body>
+</html>

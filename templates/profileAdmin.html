@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="UTF-8">
+    <title>Admin Profile</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+<link rel="stylesheet" href="/static/css/createElection.css"/>
+    <link rel="stylesheet" href="/static/css/profileAdmin.css">
+      <link rel="stylesheet" href="/static/css/dashboard.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<section class="headerC">
+    <nav>
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                 <li><a href="/dashboard">DASHBOARD</a> </li>
+                <li><a href="/aboutUs">ABOUT US</a> </li>
+                <li><a href="/help">HELP</a> </li>
+                <li><a href="/setting">SETTING</a> </li>
+                <li><a href="/logout">Log out</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+   </section>
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+<div class="col-xl-6 col-md-12">
+                                                <div class="card user-card-full">
+                                                    <div class="row m-l-0 m-r-0">
+                                                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                                                            <div class="card-block text-center text-white">
+                                                                <div class="m-b-25">
+                                                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                                                </div>
+                                                                <h6 class="f-w-600">{{data['username']}}</h6>
+                                                                <p>Administrator</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <div class="card-block">
+                                                                <h2 class="m-b-20 p-b-5 b-b-default f-w-600">Profile</h2>
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Name</p>
+                                                                        <h6 > {{data['username']}} </h6>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Email</p>
+                                                                        <h6 >{{data['email']}}</h6>
+                                                                    </div>
+  									                                <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Post</p>
+                                                                        <h6 >{{data['roleOfAdmin']}}</h6>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Organization</p>
+                                                                        <h6 >{{data['orgname']}}</h6>
+                                                                    </div>
+
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-600">Field</p>
+                                                                        <h6 >{{data['field']}}</h6>
+                                                                    </div>
+
+
+
+                                                                    <br><br><hr><br>
+
+                                                                    <br>
+
+                                                                <script>
+                                                                var coll = document.getElementsByClassName("collapsible");
+                                                                var i;
+
+                                                                for (i = 0; i < coll.length; i++) {
+                                                                  coll[i].addEventListener("click", function() {
+                                                                    this.classList.toggle("active");
+                                                                    var content = this.nextElementSibling;
+                                                                    if (content.style.display === "block") {
+                                                                      content.style.display = "none";
+                                                                    } else {
+                                                                      content.style.display = "block";
+                                                                    }
+                                                                  });
+                                                                }
+                                                                </script>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             </div>
+                                                </div>
+                                            </div>
+<script>
+     var navlinks=document.getElementById("navlinks");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+     function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>

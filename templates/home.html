@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+<section class="headerC">
+    <nav>
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/aboutUs">ABOUT US</a> </li>
+                <li><a href="/help">HELP</a> </li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+        <h1>E-Voting</h1>
+        <p>E-Voting guarantees election integrity, boots voter engagement and saves serious hours.<br>
+        Moreover it is free to use</p>
+        <br>
+        <p>register yourself to conduct election</p>
+    </div>
+</section>
+
+ <div class="n2-small">
+            <a href="/signupAdmin" class="hero-btn">REGISTER</a>
+            <a href="/loginOfAdmin" class="hero-btn">LOGIN</a>
+    </div>
+{{msg}}
+<section class="course">
+    <h1>Take your Votes to the Next Level</h1>
+    <div class="row">
+        <div class="course-col">
+     <p><strong>Improve voter engagement</strong><br>Notify voters using email with your own systems.Voters vote by using this online system.</p>
+        </div>
+
+        <div class="course-col">
+    <p><strong>High-integrity voting</strong><br>Voters can only vote once and voting choices remain anonymous(secret).Each Election has one, secure voting key and vote is verifiable. </p>
+        </div>
+
+        <div class="course-col">
+     <p><strong>Real-time results</strong><br>Winners are immediately calculated in our system.You can view results yourself too.</p>
+        </div>
+    </div>
+     <div class="row">
+        <div class="course-col">
+     <p><strong>Flexible Election</strong><br>Manage candidate elections,board positions and members more efficiently.</p>
+        </div>
+
+        <div class="course-col">
+    <p><strong>Automated and Simple</strong><br>Setup your Election in few steps-spend your time in monitoring, not in counting.</p>
+        </div>
+
+        <div class="course-col">
+    <p><strong>Secure and Private</strong><br>We don't share or use voter data. Your election stay private. Even your voting is done by secret keys.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="campus">
+    <h1>Our system just works for every Association</h1><br>
+    <p>If your an Executive Director, CEO, Board Secretary or Legal Counsel, our system voting platform has the flexibility and power to handle any type of voting, so you can make powerful decisions, fast, while ensuring your members are well represented. </p>
+    <div class="row">
+        <div class="campus-col">
+            <img src="/static/images/bluebuild.jpg">
+            <div class="layer">
+                <h3>Professional Associations</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="/static/images/court.jpg">
+            <div class="layer">
+                <h3>Lawyers and Accountants</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="/static/images/school.jpg">
+            <div class="layer">
+                <h3>Colleges and Universities</h3>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+         <div class="row">
+           <div class="footer-col">
+
+             <ul>
+                 <i class="fa fa-copyright" aria-hidden="true"></i>2023 E-Voting, Inc. All Rights Reserved
+
+             </ul>
+           </div>
+
+           <div class="footer-col">
+             <ul class="social-link list-unstyled m-t-40 m-b-10">
+
+                   <a href="https://www.facebook.com/" target="_blank">
+                 <i class="fa fa-facebook" style="font-size:20px">  </i>
+                          <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa fa-instagram" style="font-size:20px">  </i>
+                               <a href="https://www.twitter.com/" target="_blank">
+                <i class="fa fa-twitter" style="font-size:20px">  </i>
+             </ul>
+           </div>
+         </div>
+        </div>
+     </footer>
+<br>
+
+</section>
+
+
+
+
+
+<br>
+
+
+<!-----javascript-->
+<script>
+     var navlinks=document.getElementById("navlinks");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+     function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+
+</body>
+</html>

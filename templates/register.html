@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Registeration</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <link rel="stylesheet" href="/static/css/register.css">
+ 	<link rel="stylesheet" type="text/css" href="/static/css/nunito-font.css">
+
+    <style>
+        button
+        {
+              font-size: 12px;
+              text-transform: uppercase;
+              padding: 5px 30px;
+              background: lightseagreen;
+              color: #ffffff;
+              border-radius: 30px;
+              margin-right: 20px;
+              border: none;
+              font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="form-v6">
+ <br><h3 style="color: lightseagreen; text-align: center;">{{msg}}</h3>
+   <br>
+	<div class="page-content">
+		<div class="form-v6-content">
+			<div class="form-left">
+                <div class="h3padding">
+				<h3 style="text-align: center; color: black;"><br>Register Yourself<br><br></h3>
+			<br><h4>To cast your votes and to view Election result, visit the login page(login as voters/candidates).</h4>
+                    <h5 style=" text-align: center; color: white;">login as voter/candidate
+                      <a href="/loginOfAdmin" style="text-align: center; color: black;">login</a>
+                  </h5>
+            <br><h4> if you already have an admin account,login as admin.<br></h4>
+                    <br>
+                <br><h4>User can only conduct elections if user have admin account. <br></h4>
+                </div>
+            </div>
+			<form class="form-detail" action="/api/adminsignup" method="post">
+				<h2>Administrator Sign Up</h2>
+
+				<div class="form-row">
+                    <label style="color: lightseagreen">Enter name</label>
+					<input type="text" name="name" >
+				</div>
+				<div class="form-row">
+                    <label style="color: lightseagreen">Enter email</label>
+					<input type="text"  name="email"  required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" >
+				</div>
+				<div class="form-row">
+                    <label style="color: lightseagreen">Enter password</label>
+                    <h6 style="color: grey;">8 character long</h6>
+					<input type="password"  name="passwd" >
+
+				</div>
+
+                <div class="form-row">
+                    <label style="color: lightseagreen">Enter organization name</label>
+					<input type="text"  name="orgname"  >
+
+				</div>
+                <div class="form-row">
+                    <label style="color: lightseagreen">Enter role/post</label>
+                    <h6 style="color: grey;">like director,principle,president,manager</h6>
+					<input type="text"  name="role" >
+
+				</div>
+                <div class="form-row">
+                    <label style="color: lightseagreen">Enter field</label>
+                    <h6 style="color: grey;">academic,health,law or government association</h6>
+					<input type="text" name="field" >
+
+				</div>
+                <br>
+                <p style="color: lightseagreen; text-align: center;">have admin account :
+                      <a href="/loginOfAdmin" style="text-align: center;">Login </a>
+                  </p>
+				<div class="form-row-last">
+					<input type="submit" name="submit" class="register" value="SIGNUP">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: lightseagreen;
+  --light-shadow: lightblue;
+  --dark-shadow: white;
+}
+.headVD{
+    font-weight: bold;
+    font-family: "Colonna MT";
+    color: lightseagreen;
+}
+.textVD{
+    color: black;
+    font-weight: normal;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <title>dashboard</title>
+</head>
+
+<body>
+   <section class="headerC">
+    <nav>
+        <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/aboutUs">ABOUT US</a> </li>
+                <li><a href="/help">HELP</a> </li>
+                <li><a href="/api/ProfilepageOfAdmin">PROFILE</a> </li>
+                <li><a href="/setting">SETTING</a> </li>
+                <li><a href="/logout">Log out</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+   </section>
+<br>
+   <br><h3 style="color: lightseagreen; text-align: center;">{{msg}}</h3>
+   <br><br><br>
+	<div class="hero-container">
+		<div class="main-container">
+			<div class="poster-container">
+				<img src="/static/images/create%20election.jpg" class="poster" />
+                <div class="ticket__movie-Ctitle">
+					<h4 >Create New Election</h4>
+                </div>
+			</div>
+			<div class="ticket-container">
+				<div class="ticket__content">
+					<p class="ticket__movie-slogan">
+						Administrator can create a new election and conduct it
+					</p>
+                    <a href="/createElection">
+					<button class="ticket__buy-btn">new</button>
+                    </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-container" >
+			<div class="poster-container" >
+				<img src="/static/images/castvote.jpg" class="poster" />
+                <div class="ticket__movie-Ctitle">
+                <h4 >  View Election Details</h4>
+                </div>
+			</div>
+			<div class="ticket-container">
+				<div class="ticket__content">
+					<p class="ticket__movie-slogan">
+						View specific election details by using election id
+					</p>
+                    <a href="/electionDetail">
+					<button class="ticket__buy-btn">Detail</button>
+                    </a>
+				</div>
+			</div>
+		</div>
+        <div class="main-container">
+			<div class="poster-container">
+				<img src="/static/images/resultelection.jpg" class="poster" />
+                <div class="ticket__movie-Ctitle">
+					<h4 >View Election records</h4>
+                </div>
+			</div>
+			<div class="ticket-container">
+				<div class="ticket__content">
+					<p class="ticket__movie-slogan">
+						View previous all elections and their results information
+					</p>
+
+                    <a href="/viewAllElection">
+					<button class="ticket__buy-btn">record</button>
+                    </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-----javascript-->
+<script>
+     var navlinks=document.getElementById("navlinks");
+    function showMenu(){
+        navlinks.style.right="0";
+    }
+     function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>
