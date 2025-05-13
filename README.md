@@ -1,8 +1,9 @@
-Electronic Voting System
+
+# Electronic Voting System
 
 A secure and efficient online voting platform designed to streamline the election process. Built using Python (Flask), MySQL, HTML/CSS, and JavaScript, this system ensures robust security through secret key mechanisms and provides real-time result tracking.
 
-Features
+## Features
 
 - Secure voter authentication using a secret key
 - Email notifications for vote confirmation
@@ -11,14 +12,14 @@ Features
 - Responsive and user-friendly UI
 - Encrypted vote storage for enhanced security
 
-Tech Stack
+## Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** Python with Flask
 - **Database:** MySQL
 - **Security:** Secret key mechanism, email validation
 
-How to Run Locally
+## How to Run Locally
 
 ### 1. Clone the Repository
 
